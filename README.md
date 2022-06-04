@@ -8,7 +8,7 @@
 
 ### ویدیوی آموزشی این سورس
 
-https://youtu.be/Golp-WCybQU
+https://youtu.be/e_hunvhHviQ
 
 ### چنل دیسکورد ما برای سوالات و پیشنهادات شما
 
@@ -32,7 +32,7 @@ You can get target's Latitude and Longitude By sending a link.
 
 ### How-to-make-this-source Video on YouTube:
 
-https://youtu.be/Golp-WCybQU
+https://youtu.be/e_hunvhHviQ
 
 ### Our Discord Channel For Q&A:
 
